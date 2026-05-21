@@ -68,22 +68,7 @@
         </div>
 
         {{-- Stats row --}}
-        <div class="d-flex gap-4 mt-5 flex-wrap justify-content-center">
-            <div style="text-align:center;">
-                <div style="font-size:28px;font-weight:800;color:#fff;">3</div>
-                <div style="font-size:12px;color:rgba(255,255,255,.6);font-weight:500;">User Roles</div>
-            </div>
-            <div style="width:1px;background:rgba(255,255,255,.15);"></div>
-            <div style="text-align:center;">
-                <div style="font-size:28px;font-weight:800;color:#fff;">100%</div>
-                <div style="font-size:12px;color:rgba(255,255,255,.6);font-weight:500;">Web Based</div>
-            </div>
-            <div style="width:1px;background:rgba(255,255,255,.15);"></div>
-            <div style="text-align:center;">
-                <div style="font-size:28px;font-weight:800;color:#fff;">24/7</div>
-                <div style="font-size:12px;color:rgba(255,255,255,.6);font-weight:500;">Access</div>
-            </div>
-        </div>
+       
     </div>
 </section>
 
