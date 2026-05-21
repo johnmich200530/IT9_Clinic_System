@@ -1,0 +1,309 @@
+/* ============================================================
+   register.css — Patient Registration Page
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f1f5f9;
+    color: #374151;
+}
+
+/* ── Two-column layout ── */
+.register-page {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ── Left decorative panel ── */
+.register-panel-left {
+    width: 420px;
+    flex-shrink: 0;
+    background: linear-gradient(160deg, #070830 0%, #1a1f6e 55%, #2d3494 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 40px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.register-panel-left__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+}
+
+.register-panel-left__title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+    margin: 32px 0 14px;
+}
+
+.register-panel-left__sub {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    margin-bottom: 36px;
+}
+
+/* ── Brand logo ── */
+.register-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.register-brand__icon {
+    font-size: 28px;
+    color: #7dd3fc;
+}
+
+.register-brand__text {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.register-brand--mobile {
+    margin-bottom: 28px;
+    justify-content: center;
+}
+
+.register-brand--mobile .register-brand__text {
+    color: #070830;
+}
+
+.register-brand--mobile .register-brand__icon {
+    color: #4F46E5;
+}
+
+/* ── Feature list on left panel ── */
+.register-features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.register-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.register-feature__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    display: grid;
+    place-items: center;
+    font-size: 17px;
+    color: #7dd3fc;
+    flex-shrink: 0;
+}
+
+.register-feature__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.register-feature__sub {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ── Right form panel ── */
+.register-panel-right {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 48px 24px;
+    overflow-y: auto;
+}
+
+.register-form-wrap {
+    width: 100%;
+    max-width: 680px;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    padding: 40px 40px 36px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.register-form-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.register-form-sub {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 28px;
+}
+
+/* ── Form grid rows ── */
+.reg-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+@media (max-width: 560px) {
+    .reg-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Individual field ── */
+.reg-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.reg-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.req {
+    color: #DC2626;
+}
+
+/* ── Input wrapper with icon ── */
+.reg-input-wrap {
+    position: relative;
+}
+
+.reg-input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: #9CA3AF;
+    pointer-events: none;
+}
+
+.reg-input-wrap input,
+.reg-input-wrap select {
+    width: 100%;
+    height: 40px;
+    padding: 0 12px 0 36px;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #374151;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.reg-input-wrap input:focus,
+.reg-input-wrap select:focus {
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+.reg-input-wrap input.is-invalid,
+.reg-input-wrap select.is-invalid {
+    border-color: #DC2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Custom select arrow */
+.reg-input-wrap--select::after {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #6B7280;
+    pointer-events: none;
+}
+
+/* ── Validation error text ── */
+.reg-error {
+    font-size: 12px;
+    color: #DC2626;
+    margin-top: 2px;
+}
+
+/* ── Submit button ── */
+.reg-btn-submit {
+    width: 100%;
+    height: 44px;
+    background: #4F46E5;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.reg-btn-submit:hover {
+    background: #4338CA;
+}
+
+.reg-btn-submit:active {
+    transform: scale(0.99);
+}
+
+/* ── Login link ── */
+.reg-login-link {
+    text-align: center;
+    font-size: 13px;
+    color: #6B7280;
+    margin-top: 18px;
+    margin-bottom: 0;
+}
+
+.reg-login-link a {
+    color: #4F46E5;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.reg-login-link a:hover {
+    text-decoration: underline;
+}
+
+/* ── Responsive: collapse left panel ── */
+@media (max-width: 991px) {
+    .register-panel-right {
+        padding: 32px 16px;
+    }
+
+    .register-form-wrap {
+        padding: 28px 20px 24px;
+    }
+}

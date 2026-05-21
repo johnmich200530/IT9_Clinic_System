@@ -1,0 +1,326 @@
+/* ============================================================
+   welcome.css — Landing Page
+   ============================================================ */
+
+/* ── Base ── */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8fafc;
+}
+
+/* ── Hero ── */
+.hero {
+    background: linear-gradient(135deg, #070830 0%, #1a1f6e 60%, #2d3494 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Navbar ── */
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 48px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-login {
+    padding: 8px 22px;
+    border: 1.5px solid rgba(255, 255, 255, .5);
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all .2s;
+}
+
+.btn-login:hover {
+    background: rgba(255, 255, 255, .12);
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn-dashboard {
+    padding: 8px 22px;
+    background: #fff;
+    border-radius: 8px;
+    color: #070830;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all .2s;
+}
+
+.btn-dashboard:hover {
+    background: #e8eaf6;
+    color: #070830;
+}
+
+/* ── Hero Body ── */
+.hero-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 24px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+    padding: 6px 16px;
+    color: rgba(255, 255, 255, .9);
+    font-size: 13px;
+    margin-bottom: 28px;
+}
+
+.hero-title {
+    font-size: clamp(32px, 5vw, 58px);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    max-width: 760px;
+}
+
+.hero-title span {
+    color: #7dd3fc;
+}
+
+.hero-subtitle {
+    font-size: 17px;
+    color: rgba(255, 255, 255, .75);
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-primary-hero {
+    padding: 13px 32px;
+    background: #4F46E5;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background .2s;
+}
+
+.btn-primary-hero:hover {
+    background: #4338CA;
+    color: #fff;
+}
+
+.btn-outline-hero {
+    padding: 13px 32px;
+    border: 1.5px solid rgba(255, 255, 255, .5);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all .2s;
+}
+
+.btn-outline-hero:hover {
+    background: rgba(255, 255, 255, .1);
+    color: #fff;
+}
+
+/* ── Features Section ── */
+.features-section {
+    background: #fff;
+    padding: 80px 24px;
+}
+
+.features-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-label {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4F46E5;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 48px;
+}
+
+.feature-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 32px 28px;
+    height: 100%;
+    transition: box-shadow .2s, transform .2s;
+}
+
+.feature-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .08);
+    transform: translateY(-3px);
+}
+
+.feature-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.feature-icon--indigo  { background: #EEF2FF; }
+.feature-icon--green   { background: #ECFDF5; }
+.feature-icon--amber   { background: #FEF3C7; }
+.feature-icon--red     { background: #FEE2E2; }
+.feature-icon--emerald { background: #F0FDF4; }
+.feature-icon--blue    { background: #EFF6FF; }
+
+.feature-card h5 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ── Roles Section ── */
+.roles-section {
+    background: #f1f5f9;
+    padding: 80px 24px;
+}
+
+.roles-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.role-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 28px;
+    text-align: center;
+    height: 100%;
+    border: 1px solid #e2e8f0;
+    transition: box-shadow .2s;
+}
+
+.role-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .08);
+}
+
+.role-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 26px;
+    margin: 0 auto 18px;
+}
+
+.role-icon--indigo { background: #EEF2FF; }
+.role-icon--green  { background: #ECFDF5; }
+.role-icon--amber  { background: #FEF3C7; }
+
+.role-card h5 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.role-card p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.65;
+    margin-bottom: 20px;
+}
+
+.role-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.role-badge--indigo { background: #EEF2FF; color: #4F46E5; }
+.role-badge--green  { background: #ECFDF5; color: #059669; }
+.role-badge--amber  { background: #FEF3C7; color: #D97706; }
+
+/* ── Footer ── */
+.site-footer {
+    background: #070830;
+    color: rgba(255, 255, 255, .6);
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+}
+
+.site-footer a {
+    color: rgba(255, 255, 255, .8);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .top-nav {
+        padding: 14px 20px;
+    }
+
+    .hero-body {
+        padding: 40px 16px;
+    }
+}
