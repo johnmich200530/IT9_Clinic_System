@@ -61,7 +61,7 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction
 RUN php artisan key:generate --force
 
 # Install Node dependencies and build frontend assets
-RUN npm ci && npm run build
+RUN npm install && npm run build
 
 # Clear and cache config for production
 RUN php artisan config:clear \
