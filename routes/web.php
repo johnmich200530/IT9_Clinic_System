@@ -15,7 +15,7 @@ use App\Http\Controllers\Patient\PaymentController as PatientPaymentController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-// Root — redirect to login, or to dashboard if already authenticated
+// Root — show welcome page, redirect to dashboard if already authenticated
 Route::get('/', function () {
     if (auth()->check()) {
         $role = auth()->user()->role;
@@ -23,7 +23,7 @@ Route::get('/', function () {
         if ($role === 'doctor')  return redirect()->route('doctor.dashboard');
         return redirect()->route('patient.dashboard');
     }
-    return redirect()->route('login');
+    return view('welcome');
 })->name('home');
 
 // Admin Routes 
